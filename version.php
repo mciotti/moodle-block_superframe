@@ -19,17 +19,21 @@
  *
  * @package   block_superframe
  * @copyright  Daniel Neis <danielneis@gmail.com>
+ * @copyright  2022 G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Modified for use in MoodleBites for Developers Level 1
- * by Richard Jones & Justin Hunt.
+ * by Richard Jones, Justin Hunt and G J Barnard.
  *
  * See: https://www.moodlebites.com/mod/page/view.php?id=24546
  */
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019010504; // Minimal block
-$plugin->requires  = 2017111300; // Minimum Moodle 3.4.
 $plugin->component = 'block_superframe';
+$plugin->version = 2022120400;
+$plugin->requires  = 2022112800.00; // 4.1 (Build: 20221128).
+$plugin->supported = array(401, 401);
+$plugin->release = '401.1.0';
+$plugin->maturity = MATURITY_STABLE;
