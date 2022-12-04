@@ -29,8 +29,6 @@
  * See: https://www.moodlebites.com/mod/page/view.php?id=24546
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /*
 
 Notice some rules that will keep plugin approvers happy when you want
@@ -53,14 +51,14 @@ class block_superframe extends block_base {
     /**
      * Initialize our block with a language string.
      */
-    function init() {
+    public function init() {
         $this->title = get_string('pluginname', 'block_superframe');
     }
 
     /**
      * Add some text content to our block.
      */
-    function get_content() {
+    public function get_content() {
         global $USER;
 
         // Do we have any content?
@@ -81,6 +79,7 @@ class block_superframe extends block_base {
 
         return $this->content;
     }
+
     /**
      * This is a list of places where the block may or
      * may not be added.
@@ -92,10 +91,11 @@ class block_superframe extends block_base {
                      'course-view' => true,
                      'my' => true);
     }
+
     /**
      * Allow multiple instances of the block.
      */
-    function instance_allow_multiple() {
+    public function instance_allow_multiple() {
         return true;
     }
 
