@@ -28,7 +28,7 @@ require_login();
 
 if (is_siteadmin()) {
     $plugin = new stdClass;
-    require_once($CFG->dirroot.'/block/superframe/version.php');
+    require_once($CFG->dirroot.'/blocks/superframe/version.php');
     set_config('allversionshash', '');
     $currentconfigversion = get_config('block_superframe', 'version');
     $currentversionversion = $plugin->version;
