@@ -38,3 +38,4 @@ $string['superframe:addinstance'] = 'Aggiungi un nuovo blocco super frame';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
 
 $string['message'] = 'Sono un grande sviluppatore';
+$string['viewlink'] = 'Vedi pagina';

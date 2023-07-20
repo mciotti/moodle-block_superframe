@@ -59,7 +59,7 @@ class block_superframe extends block_base {
      * Add some text content to our block.
      */
     public function get_content() {
-        global $USER;
+        global $USER, $CFC;
 
         // Do we have any content?
         if ($this->content !== null) {
@@ -74,9 +74,9 @@ class block_superframe extends block_base {
         // OK let's add some content.
         $this->content = new stdClass();
         $this->content->footer = '';
-        $this->content->text = get_string('welcomeuser', 'block_superframe',
-                $USER);
-        $this->content->text .= '<br>' . get_string('message', 'block_superframe');
+        $this->content->text = get_string('welcomeuser', 'block_superframe', $USER);
+        $this->content->text .= '<br><a href="' . $CFG->wwwroot . '/blocks/superframe/view.php">';
+        $this->content->text .= get_string('viewlink', 'block_superframe') . '</a>';
 
         return $this->content;
     }
