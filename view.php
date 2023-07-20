@@ -22,11 +22,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 require('../../config.php');
-
+$config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
 $PAGE->set_url('/blocks/superframe/view.php');
 $PAGE->set_heading($SITE->fullname);
-$PAGE->set_pagelayout('course');
+$PAGE->set_pagelayout($config->layout);
 $PAGE->set_title(get_string('pluginname', 'block_superframe'));
 $PAGE->navbar->add(get_string('pluginname', 'block_superframe'));
 require_login();
@@ -40,12 +40,9 @@ echo fullname($USER) . '</div>';
 echo '<br>';
 
 // Build and display an iframe.
-$url = 'https://quizlet.com/132695231/scatter/embed';
-$width = '600px';
-$height = '400px';
-$attributes = ['src' => $url,
-               'width' => $width,
-               'height' => $height];
+$attributes = ['src' => $config->url,
+               'width' => $config->width,
+               'height' => $config->height];
 echo html_writer::start_tag('iframe', $attributes);
 echo html_writer::end_tag('iframe');
 

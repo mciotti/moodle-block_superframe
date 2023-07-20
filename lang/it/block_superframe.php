@@ -39,3 +39,15 @@ $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle'
 
 $string['message'] = 'Sono un grande sviluppatore';
 $string['viewlink'] = 'Vedi pagina';
+
+// Setting properties.
+$string['url'] = 'iFrame URL';
+$string['url_details'] = '';
+$string['height'] = 'Altezza';
+$string['height_details'] = '';
+$string['width'] = 'Larghezza';
+$string['width_details'] = '';
+$string['layout'] = 'Layout';
+$string['layout_details'] = '';
+$string['headerconfig'] = 'Header';
+$string['headerconfigdesc'] = 'desc Header';
