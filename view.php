@@ -34,9 +34,10 @@ require_login();
 // Start output to browser.
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'block_superframe'), 5);
-echo '<br>' ;
-echo '<div>' . $OUTPUT->user_picture($USER, array('popup'=>true)) ;
-echo fullname($USER) . '</div><br>';
+echo '<br>';
+echo '<div>' . $OUTPUT->user_picture($USER, array('popup' => true));
+echo fullname($USER) . '</div>';
+echo '<br>';
 
 // Build and display an iframe.
 $url = 'https://quizlet.com/132695231/scatter/embed';
@@ -48,5 +49,5 @@ $attributes = ['src' => $url,
 echo html_writer::start_tag('iframe', $attributes);
 echo html_writer::end_tag('iframe');
 
-//send footer out to browser
+// Send footer out to browser.
 echo $OUTPUT->footer();
