@@ -86,13 +86,15 @@ class block_superframe extends block_base {
         }
 
         // List of course students.
-        $courseid = $this->page->course->id;
-        $users = self::get_course_users($courseid);
-        $this->content->text .= html_writer::start_tag('ul');
-        foreach ($users as $user) {
-            $this->content->text .= html_writer::tag('li', $user->lastname . ', ' . $user->firstname);
+        if (has_capability('block/superframe:seestudentslist', $context)) {
+            $courseid = $this->page->course->id;
+            $users = self::get_course_users($courseid);
+            $this->content->text .= html_writer::start_tag('ul');
+            foreach ($users as $user) {
+                $this->content->text .= html_writer::tag('li', $user->lastname . ', ' . $user->firstname);
+            }
+            $this->content->text .= html_writer::end_tag('ul');
         }
-        $this->content->text .= html_writer::end_tag('ul');
 
         return $this->content;
     }
