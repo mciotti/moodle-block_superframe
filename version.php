@@ -32,7 +32,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_superframe';
-$plugin->version = 2023072000;
+$plugin->version = 2023072100;
 $plugin->requires  = 2022112800.00;
 $plugin->supported = array(401, 401);
 $plugin->release = '401.1.0';
