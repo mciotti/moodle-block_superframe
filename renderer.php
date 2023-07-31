@@ -60,10 +60,16 @@ class block_superframe_renderer extends plugin_renderer_base {
         $data->welcome = get_string('welcomeuser', 'block_superframe', fullname($USER));
 
         $context = context_block::instance($blockid);
-        // Check the capability.
+        
+        // Check the capability for link.
         if (has_capability('block/superframe:seeviewpagelink', $context)) {
             $data->url = new moodle_url('/blocks/superframe/view.php', ['blockid' => $blockid, 'courseid' => $courseid]);
             $data->text =  get_string('viewlink', 'block_superframe');
+        }
+
+        // List of course students.
+        if (has_capability('block/superframe:seestudentslist', $context)) {
+            $data->users = self::get_course_users($courseid);
         }
 
         // Render the data in a Mustache template.
