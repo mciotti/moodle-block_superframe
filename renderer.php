@@ -52,7 +52,7 @@ class block_superframe_renderer extends plugin_renderer_base {
 
    }
 
-   function fetch_block_content($blockid, $courseid) {
+   function fetch_block_content($blockid, $courseid, $users) {
         global $USER;
    
         $data = new stdClass();
@@ -69,7 +69,9 @@ class block_superframe_renderer extends plugin_renderer_base {
 
         // List of course students.
         if (has_capability('block/superframe:seestudentslist', $context)) {
-            $data->users = self::get_course_users($courseid);
+            foreach ($users as $user) {
+                $data->students[] = ''.$user->lastname.', '.$user->firstname;
+            }
         }
 
         // Render the data in a Mustache template.
