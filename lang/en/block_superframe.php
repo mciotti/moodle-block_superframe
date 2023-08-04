@@ -50,6 +50,19 @@ $string['large'] = 'Large';
 $string['message'] = 'I am a great developer';
 $string['viewlink'] = 'View page';
 
+// Block data table.  Week 5 task 1.
+$string['blockid'] = 'Block id';
+$string['blockname'] = 'Block name';
+$string['course'] = 'Block course';
+$string['catname'] = 'Course category';
+$string['tablecaption'] = 'Block data';
+$string['poptext'] = 'Block summary';
+
+// Table manager.  Week 5 task 2.
+$string['tablemanager'] = 'Table Manager: ';
+$string['tabletext'] = 'Table editing';
+$string['norecordsfound'] = 'No records found';
+
 // Setting properties.
 $string['url'] = 'iFrame URL';
 $string['url_details'] = '';

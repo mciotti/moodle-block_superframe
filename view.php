@@ -36,9 +36,9 @@ if ($courseid == $SITE->id) {
 }
 $PAGE->set_url('/blocks/superframe/view.php',
     array('blockid' => $blockid, 'courseid' => $courseid, 'size' => $size));
-$PAGE->set_heading($SITE->fullname);
+$PAGE->set_heading(get_string('pluginname', 'block_superframe'));
 $PAGE->set_pagelayout($def_config->layout);
-$PAGE->set_title(get_string('pluginname', 'block_superframe'));
+$PAGE->set_title($SITE->fullname);
 $PAGE->navbar->add(get_string('pluginname', 'block_superframe'));
 
 require_login();
