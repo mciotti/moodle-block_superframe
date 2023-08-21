@@ -29,9 +29,12 @@
     }
 }}
 <div  class="container">
-    <a href="{{{returnlink}}}">{{#str}}returncourse, block_superframe{{/str}}</a>
     <p>{{#str}} welcomeuser, block_superframe, {{fullname}} {{/str}}</p>
     {{> block_superframe/links}}
     <h5>{{heading}}</h5>
     <iframe src="{{url}}" height="{{height}}" width="{{width}}"></iframe>
+    <p id="block_superframe_about" class="text-primary">{{#str}}about, block_superframe{{/str}}</p>
+    <a href="{{{returnlink}}}">{{#str}}returncourse, block_superframe{{/str}}</a>
+    <br><br>
+    <button id="block_superframe_jsskill" class="button primary">{{#str}}jsskill, block_superframe{{/str}}</button>
 </div>

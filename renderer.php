@@ -26,6 +26,25 @@ class block_superframe_renderer extends plugin_renderer_base {
 
     function display_view_page($url, $width, $height, $courseid, $blockid) {
         global $USER;
+
+        $this->page->requires->js_call_amd('block_superframe/modal_amd', 'init',
+            array('data' =>
+                array(
+                    'title' => get_string('about', 'block_superframe'),
+                    'body' => get_string('modalbody', 'block_superframe'),
+                    'footer' => get_string('modalfooter', 'block_superframe')
+                )
+            )
+        );
+
+        $this->page->requires->js_call_amd('block_superframe/notification_amd', 'init',
+            array('data' =>
+                array(
+                    'message' => get_string('message_notification', 'block_superframe'),
+                    'type' => 'info'
+                )
+            )
+        );
    
         $data = new stdClass();
 
@@ -74,8 +93,10 @@ class block_superframe_renderer extends plugin_renderer_base {
         global $USER;
    
         $data = new stdClass();
-
-        $data->welcome = get_string('welcomeuser', 'block_superframe', fullname($USER));
+        $name = $USER->firstname.' '.$USER->lastname;
+        $this->page->requires->js_call_amd('block_superframe/test_amd', 'init', ['name' => $name]);
+        $data->headingclass = 'block_superframe_heading';
+        $data->welcome = get_string('welcomeuser', 'block_superframe', $name);  // Changed line.
 
         $context = context_block::instance($blockid);
         
