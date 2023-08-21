@@ -74,3 +74,6 @@ $string['layout'] = 'iFrame layout';
 $string['layout_details'] = '';
 $string['headerconfig'] = 'Header';
 $string['headerconfigdesc'] = 'desc Header';
+
+// Navigation API.
+$string['userlink'] = 'Installed blocks';

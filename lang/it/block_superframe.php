@@ -33,6 +33,12 @@
 $string['pluginname'] = 'Super frame';
 $string['welcomeuser'] = 'Benvenuto {$a}';
 
+$string['size'] = 'Seleziona la dimensione per l\'iframe';
+$string['custom'] = 'Custom';
+$string['small'] = 'Piccolo';
+$string['medium'] = 'Medio';
+$string['large'] = 'Grande';
+
 // Capability strings.
 $string['superframe:addinstance'] = 'Aggiungi un nuovo blocco super frame';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
